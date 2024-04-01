@@ -13,11 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        TwitterService.shared.generateTweet(for: "test"){ success in
+        TwitterService.shared.generateTweet(for: "test2"){ success in
             if success{
                 print("Tweeted")
             } else{
-                print("faied")
+                print("failed")
             }
         }
     }

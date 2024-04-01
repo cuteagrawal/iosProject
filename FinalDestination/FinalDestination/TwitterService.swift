@@ -1,6 +1,9 @@
 import Foundation
 import OAuthSwift
 
+// package: https://github.com/OAuthSwift/OAuthSwift.git
+
+
 class TwitterService {
     
     static let shared = TwitterService()
@@ -17,9 +20,15 @@ class TwitterService {
         
         let oauthClient = OAuthSwiftClient(consumerKey: apiKey, consumerSecret: apiSecretKey, oauthToken: accessToken, oauthTokenSecret: accessSecretToken, version: .oauth1)
         
+        /*
+         reference JSONSerialization swift: https://www.youtube.com/watch?v=Yix4RyEgCdM
+         options: .allowFragments allows strings numbers etc. But by deaful it is false and we can use array
+         tweet gets data from our users
+         */
+        
         let parameters = ["text": tweet]
         guard let jsonData = try? JSONSerialization.data(withJSONObject: parameters) else {
-            print("Error: Failed to serialize tweet data")
+            print("Error: Failed to JSONserialize tweet data")
             completion(false)
             return
         }
@@ -41,3 +50,17 @@ class TwitterService {
         }
     }
 }
+
+
+
+/*
+ information from POSTMAN
+ 
+ curl --location 'https://api.twitter.com/2/tweets' \
+ --header 'Content-Type: application/json' \
+ --header 'Authorization: OAuth oauth_consumer_key="cmydQISfwxrppKdrBRApmeRNL",oauth_token="2989656215-oYmiEgiK6pBjc4VPExra0GKgVmk2YgAlS94Brrx",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1711933685",oauth_nonce="sUxt8VgU905",oauth_version="1.0",oauth_signature="8BY3yRVNsvQEomk8G0Ory5gCgn0%3D"' \
+ --header 'Cookie: guest_id=v1%3A171192776017421354' \
+ --data '{
+     "text": "Testing Twitter Project"
+ }'
+ */
