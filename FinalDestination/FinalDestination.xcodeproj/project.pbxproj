@@ -15,6 +15,7 @@
 		BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA5C9052BB9FD18008C1960 /* LaunchScreen.storyboard */; };
 		BCA5C90F2BBA3289008C1960 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C90E2BBA3289008C1960 /* TwitterService.swift */; };
 		BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BCA5C9112BBA358F008C1960 /* OAuthSwift */; };
+		BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BCA5C9062BB9FD18008C1960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCA5C9082BB9FD18008C1960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCA5C90E2BBA3289008C1960 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				BCA5C9052BB9FD18008C1960 /* LaunchScreen.storyboard */,
 				BCA5C9082BB9FD18008C1960 /* Info.plist */,
 				BCA5C90E2BBA3289008C1960 /* TwitterService.swift */,
+				BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */,
 			);
 			path = FinalDestination;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
+				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
 				BCA5C90F2BBA3289008C1960 /* TwitterService.swift in Sources */,
 			);

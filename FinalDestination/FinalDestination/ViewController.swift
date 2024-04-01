@@ -12,14 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        TwitterService.shared.generateTweet(for: "test2"){ success in
-            if success{
-                print("Tweeted")
-            } else{
-                print("failed")
-            }
-        }
+      
+    }
+    
+    
+    @IBAction func unwindToThisView(sender : UIStoryboardSegue)
+    {
+    // typically empty unless special code needed
     }
 
 
