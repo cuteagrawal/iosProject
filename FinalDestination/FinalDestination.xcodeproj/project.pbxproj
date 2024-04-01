@@ -55,6 +55,16 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		BC6EF6832BBB75E600466C5A /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */,
+				BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */,
+				BCA5C90E2BBA3289008C1960 /* TwitterService.swift */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
 		BCA5C8EE2BB9FD17008C1960 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EF6832BBB75E600466C5A /* Twitter */,
 				BC6EF67E2BBB734B00466C5A /* Database */,
 				BCA5C8FA2BB9FD17008C1960 /* AppDelegate.swift */,
 				BCA5C8FC2BB9FD17008C1960 /* SceneDelegate.swift */,
@@ -82,9 +93,6 @@
 				BCA5C9032BB9FD18008C1960 /* Assets.xcassets */,
 				BCA5C9052BB9FD18008C1960 /* LaunchScreen.storyboard */,
 				BCA5C9082BB9FD18008C1960 /* Info.plist */,
-				BCA5C90E2BBA3289008C1960 /* TwitterService.swift */,
-				BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */,
-				BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */,
 			);
 			path = FinalDestination;
 			sourceTree = "<group>";
