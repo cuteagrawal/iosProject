@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="tfTweet" destination="f5T-VC-dap" id="GRd-KZ-SfM"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="BackToHome" modalPresentationStyle="fullScreen" id="hnC-FV-Dx0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXN-nF-8QR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,7 +141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLH-fU-ePW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="euy-aA-opU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-2"/>
+            <point key="canvasLocation" x="1195" y="571"/>
         </scene>
     </scenes>
     <resources>

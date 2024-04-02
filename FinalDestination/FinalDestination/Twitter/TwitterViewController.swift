@@ -24,16 +24,20 @@ class TwitterViewController: UIViewController, UITextFieldDelegate {
                 
                 
                 let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-                
                 let returnCode : Bool = mainDelegate.inserIntoDatabase(tweetInstance: tweetInst)
                 
-                var returnMsg = "Tweet Added"
                 
-                if returnCode == false{
-                    returnMsg = "Tweet Add Failed"
+                let alertController = UIAlertController(title: "Tweeted Succesfully", message: "You tweeted succesfully.", preferredStyle: .alert)
+                
+                
+                let yesAction = UIAlertAction(title: "Navigate to the Home Page", style:.default){_ in
+                    
+                    self.performSegue(withIdentifier: "BackToHome", sender: self)
+                    
                 }
                 
-                
+                alertController.addAction(yesAction)
+                self.present(alertController, animated: true)
                 
                 
             } else{
