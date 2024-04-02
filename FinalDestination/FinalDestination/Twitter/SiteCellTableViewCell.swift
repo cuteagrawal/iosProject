@@ -39,7 +39,7 @@ class SiteCellTableViewCell: UITableViewCell {
     
     
     override func layoutSubviews() {
-        primaryLabel.frame = CGRect(x: 100, y: 5, width: 460, height: 30)
+        primaryLabel.frame = CGRect(x: 10, y: 5, width: 460, height: 60)
     }
     
     
