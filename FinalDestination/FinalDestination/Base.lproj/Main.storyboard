@@ -124,11 +124,18 @@
                                 <rect key="frame" x="0.0" y="222" width="393" height="630"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5OI-TO-kxm" id="4Cw-0d-ruc"/>
+                                    <outlet property="delegate" destination="5OI-TO-kxm" id="dNP-bf-Vjh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rxr-tg-T2F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tblVe" destination="jzM-im-cAh" id="ulZ-M0-S7F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLH-fU-ePW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="euy-aA-opU" userLabel="Exit" sceneMemberID="exit"/>
