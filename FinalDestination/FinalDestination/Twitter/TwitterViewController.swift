@@ -13,36 +13,49 @@ class TwitterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func sendTweet (sender: UIButton){
         
-        var tweetData = tfTweet.text
-        
-        TwitterService.shared.generateTweet(for: tweetData ?? "I need to sleep"){ success in
-            if success{
-                print("Tweeted")
-                
-                let tweetInst : TweetData = .init()
-                tweetInst.initWithData(theRow: 0, theTweet: self.tfTweet.text!)
-                
-                
-                let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-                let returnCode : Bool = mainDelegate.inserIntoDatabase(tweetInstance: tweetInst)
-                
-                
-                let alertController = UIAlertController(title: "Tweeted Succesfully", message: "You tweeted succesfully.", preferredStyle: .alert)
-                
-                
-                let yesAction = UIAlertAction(title: "Navigate to the Home Page", style:.default){_ in
+        if(tfTweet.text!.isEmpty == true || tfTweet.text!.count > 23){
+            
+            let alertController = UIAlertController(title: "Error", message: "Please keep the character limit between 1 & 23", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+            
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
+            
+        }else{
+            
+            var tweetData = tfTweet.text
+            
+            TwitterService.shared.generateTweet(for: tweetData ?? "I need to sleep"){ success in
+                if success{
+                    print("Tweeted")
                     
-                    self.performSegue(withIdentifier: "BackToHome", sender: self)
+                    let tweetInst : TweetData = .init()
+                    tweetInst.initWithData(theRow: 0, theTweet: self.tfTweet.text!)
                     
+                    
+                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let returnCode : Bool = mainDelegate.inserIntoDatabase(tweetInstance: tweetInst)
+                    
+                    
+                    let alertController = UIAlertController(title: "Tweeted Succesfully", message: "You tweeted succesfully.", preferredStyle: .alert)
+                    
+                    
+                    let yesAction = UIAlertAction(title: "Navigate to the Home Page", style:.default){_ in
+                        
+                        self.performSegue(withIdentifier: "BackToHome", sender: self)
+                        
+                    }
+                    
+                    alertController.addAction(yesAction)
+                    self.present(alertController, animated: true)
+                    
+                    
+                } else{
+                    print("failed")
                 }
                 
-                alertController.addAction(yesAction)
-                self.present(alertController, animated: true)
-                
-                
-            } else{
-                print("failed")
             }
+            
         }
     }
     
