@@ -18,6 +18,24 @@ class TwitterViewController: UIViewController, UITextFieldDelegate {
         TwitterService.shared.generateTweet(for: tweetData ?? "I need to sleep"){ success in
             if success{
                 print("Tweeted")
+                
+                let tweetInst : TweetData = .init()
+                tweetInst.initWithData(theRow: 0, theTweet: self.tfTweet.text!)
+                
+                
+                let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                let returnCode : Bool = mainDelegate.inserIntoDatabase(tweetInstance: tweetInst)
+                
+                var returnMsg = "Tweet Added"
+                
+                if returnCode == false{
+                    returnMsg = "Tweet Add Failed"
+                }
+                
+                
+                
+                
             } else{
                 print("failed")
             }
