@@ -7,6 +7,7 @@
 
 import UIKit
 import SQLite3
+import MapKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,11 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var databaseName : String = "FinalDestination.db"
     var databasePath : String = ""
     var tweetArr : [TweetData] = []
-    
-    
-    
-    
-    
+    var pointsOfInterest : [MKMapItem] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
