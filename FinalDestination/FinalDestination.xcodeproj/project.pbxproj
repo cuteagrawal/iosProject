@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910341E52BC5ACB5006CAAC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910341E42BC5ACB5006CAAC4 /* MapKit.framework */; };
+		910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E72BC5AEEF006CAAC4 /* SightseeingViewController.swift */; };
+		910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */; };
+		910341EC2BC5CC40006CAAC4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */; };
+		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
 		BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */ = {isa = PBXBuildFile; fileRef = BC6EF67F2BBB735E00466C5A /* FinalDestination.db */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910341E42BC5ACB5006CAAC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		910341E72BC5AEEF006CAAC4 /* SightseeingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingViewController.swift; sourceTree = "<group>"; };
+		910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingTableViewController.swift; sourceTree = "<group>"; };
+		910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910341E52BC5ACB5006CAAC4 /* MapKit.framework in Frameworks */,
 				BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910341E32BC5ACB5006CAAC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				910341E42BC5ACB5006CAAC4 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		910341E62BC5AED4006CAAC4 /* Sightseeing */ = {
+			isa = PBXGroup;
+			children = (
+				910341E72BC5AEEF006CAAC4 /* SightseeingViewController.swift */,
+				910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */,
+				910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */,
+			);
+			path = Sightseeing;
+			sourceTree = "<group>";
+		};
+		91211C432BC71C1F0099D22D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		BC6EF67E2BBB734B00466C5A /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +113,7 @@
 			children = (
 				BCA5C8F92BB9FD17008C1960 /* FinalDestination */,
 				BCA5C8F82BB9FD17008C1960 /* Products */,
+				910341E32BC5ACB5006CAAC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +128,8 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
+				91211C432BC71C1F0099D22D /* Images */,
+				910341E62BC5AED4006CAAC4 /* Sightseeing */,
 				BC6EF6832BBB75E600466C5A /* Twitter */,
 				BC6EF67E2BBB734B00466C5A /* Database */,
 				BCA5C8FA2BB9FD17008C1960 /* AppDelegate.swift */,
@@ -170,6 +210,7 @@
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
+				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,11 +222,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910341EC2BC5CC40006CAAC4 /* POITableViewCell.swift in Sources */,
+				910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */,
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
 				BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */,
 				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
+				910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */,
 				BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */,
 				BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */,
 				BCA5C90F2BBA3289008C1960 /* TwitterService.swift in Sources */,
