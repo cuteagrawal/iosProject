@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class SightseeingTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -21,6 +21,10 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
         return mainDelegate.pointsOfInterest.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell : POITableViewCell = tableView.dequeueReusableCell(withIdentifier: "POICell") as? POITableViewCell ?? POITableViewCell(style: .default, reuseIdentifier: "POICell")
         
@@ -28,7 +32,19 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
         
         tableCell.locationName.text =  mainDelegate.pointsOfInterest[rowNum].name
         
+        let category = mainDelegate.pointsOfInterest[rowNum].pointOfInterestCategory?.rawValue.components(separatedBy: "Category")
+        
+        tableCell.locationType.text = String(category?[1] ?? "Unknown")
+        
+        tableCell.locationPhoneNumber.text = mainDelegate.pointsOfInterest[rowNum].phoneNumber ?? "No Phone Number Provided"
+        
+        tableCell.accessoryType = .disclosureIndicator
+        
         return tableCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        mainDelegate.pointsOfInterest[indexPath.row].openInMaps()
     }
     
 

@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class SightseeingViewController: UIViewController, MKMapViewDelegate {
+class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -20,43 +20,73 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func unwindToSightseeingVC (sender: UIStoryboardSegue) { }
+    
     @IBAction func findPointsOfInterest()
     {
         print("Fetching")
-        let poiRequest = MKLocalPointsOfInterestRequest(center: findNewLocation(prompt: tbLocation.text!), radius: 1000)
         
-        let search = MKLocalSearch(request: poiRequest)
-        search.start(completionHandler: {
-            placemarks, error in
-            self.mainDelegate.pointsOfInterest = placemarks!.mapItems
-            self.performSegue(withIdentifier: "segueToPOIList", sender: nil)
-        })
-    }
-    
-    func findNewLocation(prompt : String) -> CLLocationCoordinate2D
-    {
+        if tbLocation.text!.count <= 0 { return }
+        
         let geocoder = CLGeocoder()
-        var coord2D : CLLocationCoordinate2D!
         
-        geocoder.geocodeAddressString(prompt, completionHandler: {
+        geocoder.geocodeAddressString(tbLocation.text!, completionHandler: {
             placemarks, error in
             
-            print(placemarks?.count)
+            let location = (placemarks?.first)!
             
-            /*print("here")
-            if error != nil { print("Error \(error.debugDescription)") }
+            let poiRequest = MKLocalPointsOfInterestRequest(center: location.location!.coordinate, radius: 1000)
             
-            print("here2")
-            let destination = placemarks?.first
-            
-            print("here3")
-            coord2D = CLLocationCoordinate2D(latitude: (destination!.location?.coordinate.latitude)!, longitude: (destination!.location?.coordinate.longitude)!)*/
-
+            let search = MKLocalSearch(request: poiRequest)
+            search.start(completionHandler: {
+                placemarks, error in
+                self.mainDelegate.pointsOfInterest = placemarks!.mapItems
+                self.performSegue(withIdentifier: "segueToPOIList", sender: nil)
+            })
         })
-        
-        return coord2D
     }
     
+    @IBAction func findPointsOfInterestByUserLocation()
+    {
+        print("Fetching")
+        
+        let LocationManager = CLLocationManager()
+        LocationManager.requestWhenInUseAuthorization()
+        
+        var currentLocation : CLLocation!
+        
+        if LocationManager.authorizationStatus == .authorizedWhenInUse || LocationManager.authorizationStatus == .authorizedAlways
+        {
+            currentLocation = LocationManager.location
+            
+            let geocoder = CLGeocoder()
+            
+            geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
+                placemarks, error in
+                
+                let location = (placemarks?.first)!
+                
+                let poiRequest = MKLocalPointsOfInterestRequest(center: location.location!.coordinate, radius: 1000)
+                
+                let search = MKLocalSearch(request: poiRequest)
+                search.start(completionHandler: {
+                    placemarks, error in
+                    self.mainDelegate.pointsOfInterest = placemarks!.mapItems
+                    self.performSegue(withIdentifier: "segueToPOIList", sender: nil)
+                })
+            })
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Location Services Disabled", message: "It seems like you have disabled Location Services, please enable them and try again.", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Okay", style: .cancel)
+            
+            alert.addAction(cancelAction)
+            
+            present(alert, animated: true)
+        }
+    }
 
     /*
     // MARK: - Navigation

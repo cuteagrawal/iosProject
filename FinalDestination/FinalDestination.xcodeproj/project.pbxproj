@@ -11,6 +11,7 @@
 		910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E72BC5AEEF006CAAC4 /* SightseeingViewController.swift */; };
 		910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */; };
 		910341EC2BC5CC40006CAAC4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */; };
+		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
 		BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */ = {isa = PBXBuildFile; fileRef = BC6EF67F2BBB735E00466C5A /* FinalDestination.db */; };
@@ -31,6 +32,7 @@
 		910341E72BC5AEEF006CAAC4 /* SightseeingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingViewController.swift; sourceTree = "<group>"; };
 		910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingTableViewController.swift; sourceTree = "<group>"; };
 		910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 			path = Sightseeing;
 			sourceTree = "<group>";
 		};
+		91211C432BC71C1F0099D22D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		BC6EF67E2BBB734B00466C5A /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
+				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
 				BC6EF6832BBB75E600466C5A /* Twitter */,
 				BC6EF67E2BBB734B00466C5A /* Database */,
@@ -199,6 +210,7 @@
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
+				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,8 +9,9 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
-    @IBOutlet var locationImage : UIImageView!
     @IBOutlet var locationName : UILabel!
+    @IBOutlet var locationType : UILabel!
+    @IBOutlet var locationPhoneNumber : UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
