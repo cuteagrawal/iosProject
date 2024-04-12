@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
 
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -18,6 +18,10 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
     }
     
     @IBAction func unwindToSightseeingVC (sender: UIStoryboardSegue) { }
