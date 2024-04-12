@@ -49,8 +49,8 @@ class OldBudgetViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //mainDelegate.viewBudget = mainDelegate.budgetArr[indexPath.row]
-        //performSegue(withIdentifier: "OldBudgetToBudgetView", sender: nil)
+        mainDelegate.viewBudget = mainDelegate.budgetArr[indexPath.row]
+        performSegue(withIdentifier: "OldBudgetToBudgetView", sender: nil)
     }
     
     @IBAction func unwindToOldBudget(sender : UIStoryboardSegue){
