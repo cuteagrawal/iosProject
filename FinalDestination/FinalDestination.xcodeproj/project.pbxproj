@@ -31,6 +31,10 @@
 		BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */; };
 		BCFB933A2BCAD10B00DE75BF /* OldBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */; };
 		BCFB933C2BCAD10D00DE75BF /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */; };
+		CEBD107F2BCAE6460041BD82 /* FlightTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */; };
+		CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */; };
+		CEBD10832BCAEECF0041BD82 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */; };
+		CEBD10852BCAF1410041BD82 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10842BCAF1410041BD82 /* planeIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
+		CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingViewController.swift; sourceTree = "<group>"; };
+		CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingTableViewController.swift; sourceTree = "<group>"; };
+		CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
+		CEBD10842BCAF1410041BD82 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,8 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD10842BCAF1410041BD82 /* planeIcon.png */,
+				CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */,
 				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
 			);
 			path = Images;
@@ -140,6 +150,7 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD107D2BCAE37E0041BD82 /* FlightTracking */,
 				BCFB93302BCAD0E400DE75BF /* Budget */,
 				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
@@ -167,6 +178,15 @@
 				BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */,
 			);
 			path = Budget;
+			sourceTree = "<group>";
+		};
+		CEBD107D2BCAE37E0041BD82 /* FlightTracking */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */,
+				CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */,
+			);
+			path = FlightTracking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +255,10 @@
 			files = (
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
+				CEBD10852BCAF1410041BD82 /* planeIcon.png in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
+				CEBD10832BCAEECF0041BD82 /* FT_BG.jpg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,12 +277,14 @@
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
 				BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */,
+				CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */,
 				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
 				BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */,
 				BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */,
 				910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */,
 				BCFB93362BCAD10600DE75BF /* BudgetSwiftUIView.swift in Sources */,
+				CEBD107F2BCAE6460041BD82 /* FlightTrackingViewController.swift in Sources */,
 				BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */,
 				BCFB93342BCAD10300DE75BF /* BudgetData.swift in Sources */,
 				BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */,
@@ -423,6 +447,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +475,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
