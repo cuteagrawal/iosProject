@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ *  NSObject to  hold the data of Budgets
+ */
 class BudgetData: NSObject {
     
     var id: Int?
@@ -17,6 +20,7 @@ class BudgetData: NSObject {
     var other: Double?
     var currency : String?
     
+    // Constructor
     func initWithData(theRow i:Int, theDestination n:String, theTransportation e:Double, theFood a:Double, theAccommodation z:Double, theOther g:Double, TheCurrency av:String){
         id = i
         destination = n
