@@ -16,12 +16,12 @@ class AddBudgetViewController: UIViewController, UITextFieldDelegate {
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     //IBOulets
-    @IBOutlet var destination : UITextField!
-    @IBOutlet var currency : UITextField!
-    @IBOutlet var transportation : UITextField!
-    @IBOutlet var food : UITextField!
-    @IBOutlet var accommodation : UITextField!
-    @IBOutlet var other : UITextField!
+    @IBOutlet var destination : UITextField! // For Destination name
+    @IBOutlet var currency : UITextField! // For Currency name
+    @IBOutlet var transportation : UITextField! // For transportation budget
+    @IBOutlet var food : UITextField! // For food budget
+    @IBOutlet var accommodation : UITextField! // For accommodaiton budget
+    @IBOutlet var other : UITextField! // For other budget
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,7 @@ class AddBudgetViewController: UIViewController, UITextFieldDelegate {
         if returnCode {
             let alert = UIAlertController(title: "Thank You!", message: "Your Budget Has Been Added", preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                // When it click okk when perform segue to OldBudget ViewController
                 self.performSegue(withIdentifier: "AddBudgetToOldBudget", sender: self)
             }
             alert.addAction(okAction)
