@@ -4,6 +4,7 @@
 //
 //  Created by Cute Agrawal on 2024-03-31.
 //  Modified by Jay Patel on 2024-04-09.
+//  Modified by Feby Jomy on 20234-04-13.
 //
 
 import UIKit
@@ -12,13 +13,16 @@ import MapKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var databaseName : String = "FinalDestination.db"
     var databasePath : String = ""
     var tweetArr : [TweetData] = []
     var pointsOfInterest : [MKMapItem] = []
     var budgetArr : [BudgetData] = []
     var viewBudget : BudgetData? = nil
+    var flightArr: [FlightData] = []
+    var viewFlight: FlightData? = nil
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -51,6 +55,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    func readFlightDataFromDatabase(){
+        flightArr.removeAll()
+        var db:OpaquePointer? = nil
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+            
+            print("successfully opened database at \(self.databasePath)")
+            var queryStatement : OpaquePointer? = nil
+            
+            let flightQuery: String = "select * from flights"
+            
+            // Flight data query here
+            if(sqlite3_prepare_v2(db, flightQuery, -1, &queryStatement, nil)) == SQLITE_OK{
+                while(sqlite3_step(queryStatement) == SQLITE_ROW){
+                    // Flight data class
+                    let dataFlight: FlightData = .init()
+                    
+                    // getting previous search flight details from db
+                    let id: Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let airLineName: String = String(cString: sqlite3_column_text(queryStatement, 1))
+                    let flightCode: String = String(cString: sqlite3_column_text(queryStatement, 2))
+                    let departAptCode: String = String(cString: sqlite3_column_text(queryStatement, 3))
+                    let arriveAptCode: String = String(cString: sqlite3_column_text(queryStatement, 4))
+                    
+                    // Adding flight data records to the array
+                    dataFlight.initWithData(theRow: id, airlineName: airLineName,
+                                            theFlightCode: flightCode, departureAirportCode: departAptCode,
+                                            arrivalAirportCode: arriveAptCode)
+                    
+                    flightArr.append(dataFlight)
+                    
+                    print("Flight Query Result: \(id) | \(airLineName) | \(flightCode) | \(departAptCode) | \(arriveAptCode)")
+                }
+                sqlite3_finalize(queryStatement)
+            }else{
+                print("Error in flights prepare")
+            }
+            sqlite3_close(db)
+            
+        } else{
+            print("unable to open database")
+        }
+        
+    }
     
     
     
@@ -114,14 +162,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else{
                 print("select statement could not be prepared")
             }
-            
-            sqlite3_close(db)
-            
-        } else{
-            print("unable to open database")
         }
     }
-    
     
     func inserIntoDatabase(tweetInstance : TweetData) -> Bool
     {
@@ -218,7 +260,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return returnCode
     }
     
-    
+    //Insert Flight search data into DB
+    func insertFlightDataIntoDatabase(flight: FlightData) -> Bool {
+        
+        var db : OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        // Starting the DB connection
+        if(sqlite3_open(self.databasePath, &db)) == SQLITE_OK{
+            
+            // sql query with placeholders
+            let insertFlightStatement: String = "insert into flights values (NULL, ?, ?, ?, ?);"
+            var insertStatement : OpaquePointer? = nil
+            
+            // preparing the sql query for insert
+            if sqlite3_prepare_v2(db,insertFlightStatement,-1, &insertStatement, nil) == SQLITE_OK{
+                
+                let airlineName = flight.airlineName! as NSString
+                let flightCode = flight.flightCode! as NSString
+                let departAptCode = flight.departureAirportCode! as NSString
+                let arriveAptCode = flight.arrivalAirportCode! as NSString
+                
+                // replacing the placeholders
+                sqlite3_bind_text(insertStatement!, 1, airlineName.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement!, 2, flightCode.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement!, 3, departAptCode.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement!, 4, arriveAptCode.utf8String, -1, nil)
+
+                // once insert is complete
+                if sqlite3_step(insertStatement) == SQLITE_DONE{
+                    let rowID = sqlite3_last_insert_rowid(db)
+                    print("Successfully inserted row \(rowID)")
+                }else{
+                    print("Could not insert row")
+                    returnCode = false
+                }
+                // finalizing the sql operation
+                sqlite3_finalize(insertStatement)
+            }else{
+                print("insert statement could not be prepared")
+                returnCode = false
+            }
+            // closing db connection
+            sqlite3_close(db)
+        }else{
+            print("unable to open database")
+            returnCode = false
+        }
+        
+        return returnCode
+    }
 //
 //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        // Override point for customization after application launch.
