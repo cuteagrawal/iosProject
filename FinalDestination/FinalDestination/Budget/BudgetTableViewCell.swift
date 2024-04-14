@@ -6,9 +6,12 @@
 //
 
 import UIKit
-
+/**
+ * TableViewCell class for the Previous Budget Table
+ */
 class BudgetTableViewCell: UITableViewCell {
     
+    // @IBOulets for the 2 lables in tables
     @IBOutlet var budgetDestination : UILabel!
     @IBOutlet var budgetCurrency : UILabel!
     
