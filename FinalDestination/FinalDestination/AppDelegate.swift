@@ -266,11 +266,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var db : OpaquePointer? = nil
         var returnCode : Bool = true
         
+        // Starting the DB connection
         if(sqlite3_open(self.databasePath, &db)) == SQLITE_OK{
             
-            let insertFlightStatement: String = "insert into table flights values (NULL, ?, ?, ?, ?);"
+            // sql query with placeholders
+            let insertFlightStatement: String = "insert into flights values (NULL, ?, ?, ?, ?);"
             var insertStatement : OpaquePointer? = nil
             
+            // preparing the sql query for insert
             if sqlite3_prepare_v2(db,insertFlightStatement,-1, &insertStatement, nil) == SQLITE_OK{
                 
                 let airlineName = flight.airlineName! as NSString
@@ -278,12 +281,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let departAptCode = flight.departureAirportCode! as NSString
                 let arriveAptCode = flight.arrivalAirportCode! as NSString
                 
+                // replacing the placeholders
                 sqlite3_bind_text(insertStatement!, 1, airlineName.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement!, 2, flightCode.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement!, 3, departAptCode.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement!, 4, arriveAptCode.utf8String, -1, nil)
 
-                
+                // once insert is complete
                 if sqlite3_step(insertStatement) == SQLITE_DONE{
                     let rowID = sqlite3_last_insert_rowid(db)
                     print("Successfully inserted row \(rowID)")
@@ -291,11 +295,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print("Could not insert row")
                     returnCode = false
                 }
+                // finalizing the sql operation
                 sqlite3_finalize(insertStatement)
             }else{
                 print("insert statement could not be prepared")
                 returnCode = false
             }
+            // closing db connection
             sqlite3_close(db)
         }else{
             print("unable to open database")

@@ -450,6 +450,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalDestination/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "This is used to add calendar events for flights";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "This is used to add calendar/reminder events for flights";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -478,6 +482,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalDestination/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "This is used to add calendar events for flights";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "This is used to add calendar/reminder events for flights";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
