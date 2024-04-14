@@ -8,17 +8,23 @@
 //      https://rapidapi.com/flightera/api/flightera-flight-data
 //      https://developer.apple.com/documentation/foundation/dateformatter
 //      https://stackoverflow.com/questions/40777416/ekeventstore-access-request-crashes-on-ios-10-messagethe-apps-info-plist-must
-//
-//
+//      https://www.programiz.com/swift-programming/guard-statement
+//  
 
 
 import UIKit
 import Foundation
 import EventKit
 
+/**
+ This is the main viewController for the flight search and calendar event functionality,
+ this allows the user to search for a flight number, which is added to dataase along with te results.
+ This also allows the user to add the flight duration as a calendar event
+ */
+
 class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
     
-    // appDelegate instance to add values to DB
+    // appDelegate instance
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // label for IATA codes (YYZ, YUL, LAX, etc..)
@@ -98,19 +104,22 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
         if let date = dateFormatter.date(from: dateString) {
-            // required format
+            // required output format
             dateFormatter.dateFormat = "hh:mm a"
             return dateFormatter.string(from: date)
+            
         } else {
+            // if the date is not in the specified format
             print("Invalid date string")
             return nil
         }
     }
     
-    // Search function
+    // Search function that is triggered by the GO button
     @IBAction func searchFlight(sender: UIButton){
         let searchFlight = flightSearchTxtFld.text ?? ""
         
+        // Actual search is only performed if there is a value in the searchbox
         if (searchFlight == ""){
             print("Empty string in search")
         }else{
@@ -118,11 +127,12 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    // Unwins segue
+    // Unwind segue
     @IBAction func unwindToFlightTrackingVC (sender: UIStoryboardSegue) { }
     
-    // Add to calendar action
+    // Add to calendar action to be triggered by the button
     @IBAction func addToCalendar(sender: UIButton){
+        // calendar event creation function
         createCalendarEvent(startTimestampString: apiResponse["scheduled_departure_utc"] ?? ""
                             ,endTimestampString: apiResponse["scheduled_arrival_utc"] ?? "")
     }
@@ -136,34 +146,41 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         // Create an Event Store instance
         let eventStore = EKEventStore()
         
-        // Request access to the user's calendar
+        // Requesting access to the user's calendar
         eventStore.requestAccess(to: .event) { (granted, error) in
             
+            // proceeds if user has given acces, also proceeds if access was granted earlier
             if granted && error == nil {
                 
                 // Access granted, create the event
                 let event = EKEvent(eventStore: eventStore)
+                
+                // setting the event title to "flight number | flight plan"
                 event.title = "\(String(describing: self.apiResponse["flnr"] ?? "")) | \(String(describing: self.apiResponse["departure_city"] ?? "")) to \(String(describing: self.apiResponse["arrival_city"] ?? "")) "
                 
                 // Convert timestamp strings to Date objects
                 let dateFormatter = ISO8601DateFormatter()
                 dateFormatter.timeZone = TimeZone(identifier: "UTC")
                 
+                // exits the process in case of error with timestamps
                 guard let startDate = dateFormatter.date(from: startTimestampString),
                       let endDate = dateFormatter.date(from: endTimestampString) else {
                     print("Error: Unable to parse timestamps.")
                     return
                 }
                 
+                // timestamps
                 event.startDate = startDate
                 event.endDate = endDate
                 
                 // Save the event to the calendar
                 event.calendar = eventStore.defaultCalendarForNewEvents
                 do {
+                    // saving the calendar event
                     try eventStore.save(event, span: .thisEvent)
                     print("Event saved successfully.")
                     
+                // if error occurred
                 } catch let error {
                     print("Error saving event: \(error.localizedDescription)")
                     alertStatus = false
@@ -182,14 +199,14 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    // Alerting the users about success or errors
+    // Alerting the users about success in creating calendar event
     func goodAlertForCalendar(){
         let alert = UIAlertController(title: "SUCCESS", message: "Your calendar event has been added!", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
+    // Alerting user in case of a failed calendar event
     func badAlertForCalendar(){
         let alert = UIAlertController(title: "ERROR!", message: "Your calendar event could not be added!", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel)
@@ -197,7 +214,7 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         present(alert, animated: true)
     }
     
-    // calling the rapid api for fligh tracking
+    // calling the rapid api for flight tracking
     func rapidAPICall(searchedFlightNumber:String){
         
         // request headers with the key and host information
@@ -209,13 +226,16 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
         //building the request
         let request = NSMutableURLRequest(url: NSURL(string: "https://flightera-flight-data.p.rapidapi.com/flight/info?flnr=\(searchedFlightNumber)")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         
-        // rest method
+        // rest method and header assignment
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
+        // Creating a data task with the request, specifying a completion handler
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if let error = error {
+                
+                // Handle error if occurred
                 print("Error: \(error)")
             } else {
                 if let httpResponse = response as? HTTPURLResponse {
@@ -226,9 +246,10 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
                             // Parsing JSON data
                             if let jsonArray = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [[String: Any]] {
                                 
+                                // looping trought the response (ideally would only loop once)
                                 for flightInfo in jsonArray {
                                     
-                                    // storing the response into the dictionary
+                                    // storing the response into the dictionary in key value pairs
                                     self.apiResponse = ["airline_name": "\(flightInfo["airline_name"] ?? "N/A")",
                                                         "flnr": "\(flightInfo["flnr"] ?? "N/A")",
                                                         "departure_iata": "\(flightInfo["departure_iata"] ?? "N/A")",
@@ -247,15 +268,15 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
                                     self.addInfoToDB()
                                 }
                             }
+                            // Handling JSON parse errors
                         } catch let parseError {
                             print("Error parsing JSON: \(parseError)")
                         }
                     }
-                    
                 }
             }
         })
-        
+        // Resuming the data task
         dataTask.resume()
     }
 }

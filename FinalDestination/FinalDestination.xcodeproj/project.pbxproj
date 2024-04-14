@@ -160,7 +160,7 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
-				CE1E137D2BCC87F000B01C92 /* New Group */,
+				CE1E137D2BCC87F000B01C92 /* FlightInfo */,
 				BCFB93302BCAD0E400DE75BF /* Budget */,
 				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
@@ -190,7 +190,7 @@
 			path = Budget;
 			sourceTree = "<group>";
 		};
-		CE1E137D2BCC87F000B01C92 /* New Group */ = {
+		CE1E137D2BCC87F000B01C92 /* FlightInfo */ = {
 			isa = PBXGroup;
 			children = (
 				CE1E137E2BCC882600B01C92 /* FlightData.swift */,
@@ -198,7 +198,7 @@
 				CE1E137F2BCC882600B01C92 /* FlightTrackingTableViewController.swift */,
 				CE1E13802BCC882600B01C92 /* FlightTrackingViewController.swift */,
 			);
-			path = "New Group";
+			path = FlightInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
