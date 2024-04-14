@@ -14,9 +14,9 @@ let mainDelegate = UIApplication.shared.delegate as! AppDelegate
 // Destination value from the viewBudget property
 let destination = mainDelegate.viewBudget?.destination
 
-// A method to move from SwiftUI to ViewController
+// Method to go from SwiftUI to ViewController
 struct YourViewControllerViewWithStoryboard: UIViewControllerRepresentable {
-    // Creates a UIViewController instance from the storyboard
+    // UIViewController instance from the storyboard
     func makeUIViewController(context: Context) -> ViewController {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController") as? ViewController else {
             fatalError("ViewController not implemented in storyboard")
@@ -32,16 +32,17 @@ struct YourViewControllerViewWithStoryboard: UIViewControllerRepresentable {
 
 // SwiftUI View representing the budget overview
 struct BudgetSwiftUIView: View {
-    
-    // Data and logic related to the budget
+    // Managing data and logic related to the budget
     @StateObject var viewModel = BudgetViewModel()
-    
     // Variable to control navigation to another view controller
     @State private var navigateToViewController = false
 
     var body: some View {
-
-        NavigationView {
+        // Destination value from mainDelegate
+        let destination = mainDelegate.viewBudget?.destination
+        
+        // NavigationView for navigation hierarchy
+        return NavigationView {
             VStack {
                 // Text displaying the destination
                 Text(destination ?? "")
@@ -88,7 +89,7 @@ struct BudgetSwiftUIView: View {
 
 // Managing data and logic related to the budget
 class BudgetViewModel: ObservableObject {
-    // Property for storing pie chart data
+    // Storing pie chart data
     @Published var pieChartData: [(label: String, value: Double)] = []
 
     // Initializer
@@ -99,7 +100,6 @@ class BudgetViewModel: ObservableObject {
 
     // Deinitializer
     deinit {
-        // Remove observer
         NotificationCenter.default.removeObserver(self)
     }
 
