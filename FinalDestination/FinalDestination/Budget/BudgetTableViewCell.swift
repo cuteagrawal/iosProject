@@ -12,8 +12,8 @@ import UIKit
 class BudgetTableViewCell: UITableViewCell {
     
     // @IBOulets for the 2 lables in tables
-    @IBOutlet var budgetDestination : UILabel!
-    @IBOutlet var budgetCurrency : UILabel!
+    @IBOutlet var budgetDestination : UILabel! // For Budget Destinaiton lable
+    @IBOutlet var budgetCurrency : UILabel! // For Budget Currency lable
     
     override func awakeFromNib() {
         super.awakeFromNib()
