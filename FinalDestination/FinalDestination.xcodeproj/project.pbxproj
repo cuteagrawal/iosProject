@@ -35,6 +35,8 @@
 		CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */; };
 		CEBD10832BCAEECF0041BD82 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */; };
 		CEBD10852BCAF1410041BD82 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10842BCAF1410041BD82 /* planeIcon.png */; };
+		CEBD10872BCB2B440041BD82 /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10862BCB2B440041BD82 /* FlightData.swift */; };
+		CEBD10892BCB356D0041BD82 /* FlightTrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingTableViewController.swift; sourceTree = "<group>"; };
 		CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
 		CEBD10842BCAF1410041BD82 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
+		CEBD10862BCB2B440041BD82 /* FlightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightData.swift; sourceTree = "<group>"; };
+		CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			children = (
 				CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */,
 				CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */,
+				CEBD10862BCB2B440041BD82 /* FlightData.swift */,
+				CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */,
 			);
 			path = FlightTracking;
 			sourceTree = "<group>";
@@ -276,11 +282,13 @@
 				910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */,
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
+				CEBD10892BCB356D0041BD82 /* FlightTrackingTableViewCell.swift in Sources */,
 				BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */,
 				CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */,
 				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
 				BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */,
+				CEBD10872BCB2B440041BD82 /* FlightData.swift in Sources */,
 				BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */,
 				910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */,
 				BCFB93362BCAD10600DE75BF /* BudgetSwiftUIView.swift in Sources */,
