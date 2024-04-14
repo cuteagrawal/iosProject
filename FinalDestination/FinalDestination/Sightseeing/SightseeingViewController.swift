@@ -10,8 +10,11 @@ import MapKit
 
 class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
 
+    
+    //Access the main delegate so the Point of Interests table can be used
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    //Text Field for the location of the user
     @IBOutlet var tbLocation : UITextField!
     
     override func viewDidLoad() {
@@ -20,12 +23,15 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         // Do any additional setup after loading the view.
     }
     
+    //Allow the keyboard to disappear after pressing return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
     
+    //An unwind segue to unwind the view controllers
     @IBAction func unwindToSightseeingVC (sender: UIStoryboardSegue) { }
     
+    //Use the location the user provided in the Text Field tbLocation to find Points of Interest in the area
     @IBAction func findPointsOfInterest()
     {
         print("Fetching")
@@ -50,6 +56,7 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         })
     }
     
+    //Find Points of Interest based on the users cell phone location
     @IBAction func findPointsOfInterestByUserLocation()
     {
         print("Fetching")
