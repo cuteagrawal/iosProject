@@ -81,7 +81,7 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
     func addInfoToDB(){
         
         // initializing data classwith all data needed
-        var flight:FlightData = .init()
+        let flight:FlightData = .init()
         flight.initWithData(theRow: 0, airlineName: apiResponse["airline_name"] ?? "", theFlightCode: apiResponse["flnr"] ?? "", departureAirportCode: apiResponse["departure_iata"] ?? "", arrivalAirportCode: apiResponse["arrival_iata"] ?? "")
         
         // inserting into DB
@@ -129,6 +129,10 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
     
     // creating a calendar event
     func createCalendarEvent(startTimestampString: String, endTimestampString: String){
+        
+        // alert Status for alerts
+        var alertStatus = true
+        
         // Create an Event Store instance
         let eventStore = EKEventStore()
         
@@ -139,7 +143,7 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
                 
                 // Access granted, create the event
                 let event = EKEvent(eventStore: eventStore)
-                event.title = "Your Event Title"
+                event.title = "\(String(describing: self.apiResponse["flnr"] ?? "")) | \(String(describing: self.apiResponse["departure_city"] ?? "")) to \(String(describing: self.apiResponse["arrival_city"] ?? "")) "
                 
                 // Convert timestamp strings to Date objects
                 let dateFormatter = ISO8601DateFormatter()
@@ -159,15 +163,38 @@ class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
                 do {
                     try eventStore.save(event, span: .thisEvent)
                     print("Event saved successfully.")
+                    
                 } catch let error {
                     print("Error saving event: \(error.localizedDescription)")
+                    alertStatus = false
                 }
             } else {
                 // Access denied or error occurred
                 print("Error: Access to calendar not granted.")
+                alertStatus = false
             }
         }
-        
+        // alerting the user based on event save status
+        if (alertStatus){
+            goodAlertForCalendar()
+        }else{
+            badAlertForCalendar()
+        }
+    }
+    
+    // Alerting the users about success or errors
+    func goodAlertForCalendar(){
+        let alert = UIAlertController(title: "SUCCESS", message: "Your calendar event has been added!", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    func badAlertForCalendar(){
+        let alert = UIAlertController(title: "ERROR!", message: "Your calendar event could not be added!", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
     
     // calling the rapid api for fligh tracking
