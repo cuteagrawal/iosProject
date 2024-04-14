@@ -15,7 +15,7 @@ class OldBudgetViewController: UIViewController, UITableViewDataSource, UITableV
     // AppDelegate instance
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    @IBOutlet var budgetTable: UITableView!
+    @IBOutlet var budgetTable: UITableView! // For table
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +61,13 @@ class OldBudgetViewController: UIViewController, UITableViewDataSource, UITableV
     // Method will invoke when rows of table is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // When user clicked row perform segue to BudgetView
         mainDelegate.viewBudget = mainDelegate.budgetArr[indexPath.row]
         performSegue(withIdentifier: "OldBudgetToBudgetView", sender: nil)
     }
     
+    // Method to unwind ViewController when it clicked back
     @IBAction func unwindToOldBudget(sender : UIStoryboardSegue){
 
     }
-
 }
