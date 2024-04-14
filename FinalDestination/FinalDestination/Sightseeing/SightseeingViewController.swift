@@ -43,6 +43,19 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         geocoder.geocodeAddressString(tbLocation.text!, completionHandler: {
             placemarks, error in
             
+            if (placemarks?.first == nil)
+            {
+                let alert = UIAlertController(title: "Location Not Found", message: "This location doesn't seem to exist, please check the spelling and try again.", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Okay", style: .cancel)
+                
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true)
+                
+                return
+            }
+            
             let location = (placemarks?.first)!
             
             let poiRequest = MKLocalPointsOfInterestRequest(center: location.location!.coordinate, radius: 1000)
@@ -50,7 +63,11 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
             let search = MKLocalSearch(request: poiRequest)
             search.start(completionHandler: {
                 placemarks, error in
-                self.mainDelegate.pointsOfInterest = placemarks!.mapItems
+                
+                var placemarkList = placemarks?.mapItems
+                placemarkList?.remove(at: 0)
+                
+                self.mainDelegate.pointsOfInterest = placemarkList!
                 self.performSegue(withIdentifier: "segueToPOIList", sender: nil)
             })
         })
