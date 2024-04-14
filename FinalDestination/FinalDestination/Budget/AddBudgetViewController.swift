@@ -12,7 +12,7 @@ import UIKit
  */
 class AddBudgetViewController: UIViewController, UITextFieldDelegate {
     
-    // AppDelegate instance to get the viewBudget property
+    // AppDelegate instance
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     //IBOulets

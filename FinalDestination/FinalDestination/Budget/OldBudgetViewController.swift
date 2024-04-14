@@ -12,7 +12,7 @@ import UIKit
  */
 class OldBudgetViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // AppDelegate instance to get the viewBudget property
+    // AppDelegate instance
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet var budgetTable: UITableView!
