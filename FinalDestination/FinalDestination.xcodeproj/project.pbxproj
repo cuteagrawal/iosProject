@@ -16,6 +16,7 @@
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
 		BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */; };
 		BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */; };
+		BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC4FDD102BCC68F6005B4D38 /* OAuthSwift */; };
 		BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */ = {isa = PBXBuildFile; fileRef = BC6EF67F2BBB735E00466C5A /* FinalDestination.db */; };
 		BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */; };
 		BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C8FA2BB9FD17008C1960 /* AppDelegate.swift */; };
@@ -25,7 +26,6 @@
 		BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA5C9032BB9FD18008C1960 /* Assets.xcassets */; };
 		BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA5C9052BB9FD18008C1960 /* LaunchScreen.storyboard */; };
 		BCA5C90F2BBA3289008C1960 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C90E2BBA3289008C1960 /* TwitterService.swift */; };
-		BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BCA5C9112BBA358F008C1960 /* OAuthSwift */; };
 		BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */; };
 		BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93312BCAD0FE00DE75BF /* AddBudgetViewController.swift */; };
 		BCFB93342BCAD10300DE75BF /* BudgetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93332BCAD10300DE75BF /* BudgetData.swift */; };
@@ -71,7 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				910341E52BC5ACB5006CAAC4 /* MapKit.framework in Frameworks */,
-				BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */,
+				BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +192,7 @@
 			);
 			name = FinalDestination;
 			packageProductDependencies = (
-				BCA5C9112BBA358F008C1960 /* OAuthSwift */,
+				BC4FDD102BCC68F6005B4D38 /* OAuthSwift */,
 			);
 			productName = FinalDestination;
 			productReference = BCA5C8F72BB9FD17008C1960 /* FinalDestination.app */;
@@ -506,7 +506,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BCA5C9112BBA358F008C1960 /* OAuthSwift */ = {
+		BC4FDD102BCC68F6005B4D38 /* OAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BCA5C9102BBA358F008C1960 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
 			productName = OAuthSwift;
