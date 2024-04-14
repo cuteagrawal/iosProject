@@ -14,6 +14,9 @@
 		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
+		BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */; };
+		BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */; };
+		BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC4FDD102BCC68F6005B4D38 /* OAuthSwift */; };
 		BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */ = {isa = PBXBuildFile; fileRef = BC6EF67F2BBB735E00466C5A /* FinalDestination.db */; };
 		BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */; };
 		BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C8FA2BB9FD17008C1960 /* AppDelegate.swift */; };
@@ -23,7 +26,6 @@
 		BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA5C9032BB9FD18008C1960 /* Assets.xcassets */; };
 		BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA5C9052BB9FD18008C1960 /* LaunchScreen.storyboard */; };
 		BCA5C90F2BBA3289008C1960 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C90E2BBA3289008C1960 /* TwitterService.swift */; };
-		BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BCA5C9112BBA358F008C1960 /* OAuthSwift */; };
 		BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */; };
 		BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93312BCAD0FE00DE75BF /* AddBudgetViewController.swift */; };
 		BCFB93342BCAD10300DE75BF /* BudgetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93332BCAD10300DE75BF /* BudgetData.swift */; };
@@ -31,12 +33,6 @@
 		BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */; };
 		BCFB933A2BCAD10B00DE75BF /* OldBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */; };
 		BCFB933C2BCAD10D00DE75BF /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */; };
-		CEBD107F2BCAE6460041BD82 /* FlightTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */; };
-		CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */; };
-		CEBD10832BCAEECF0041BD82 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */; };
-		CEBD10852BCAF1410041BD82 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD10842BCAF1410041BD82 /* planeIcon.png */; };
-		CEBD10872BCB2B440041BD82 /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10862BCB2B440041BD82 /* FlightData.swift */; };
-		CEBD10892BCB356D0041BD82 /* FlightTrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +43,8 @@
 		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
+		BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TweetBackground.jpg; sourceTree = "<group>"; };
+		BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewTweetBack.jpg; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
 		BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTweetsViewController.swift; sourceTree = "<group>"; };
 		BCA5C8F72BB9FD17008C1960 /* FinalDestination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalDestination.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,12 +63,6 @@
 		BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
-		CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingViewController.swift; sourceTree = "<group>"; };
-		CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingTableViewController.swift; sourceTree = "<group>"; };
-		CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
-		CEBD10842BCAF1410041BD82 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
-		CEBD10862BCB2B440041BD82 /* FlightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightData.swift; sourceTree = "<group>"; };
-		CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				910341E52BC5ACB5006CAAC4 /* MapKit.framework in Frameworks */,
-				BCA5C9122BBA358F008C1960 /* OAuthSwift in Frameworks */,
+				BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +99,6 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CEBD10842BCAF1410041BD82 /* planeIcon.png */,
-				CEBD10822BCAEECF0041BD82 /* FT_BG.jpg */,
 				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
 			);
 			path = Images;
@@ -125,6 +115,8 @@
 		BC6EF6832BBB75E600466C5A /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */,
+				BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */,
 				BC6EF6812BBB752500466C5A /* OldTweetsViewController.swift */,
 				BCA5C9132BBA6802008C1960 /* TwitterViewController.swift */,
 				BCA5C90E2BBA3289008C1960 /* TwitterService.swift */,
@@ -154,7 +146,6 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
-				CEBD107D2BCAE37E0041BD82 /* FlightTracking */,
 				BCFB93302BCAD0E400DE75BF /* Budget */,
 				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
@@ -184,17 +175,6 @@
 			path = Budget;
 			sourceTree = "<group>";
 		};
-		CEBD107D2BCAE37E0041BD82 /* FlightTracking */ = {
-			isa = PBXGroup;
-			children = (
-				CEBD107E2BCAE6460041BD82 /* FlightTrackingViewController.swift */,
-				CEBD10802BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift */,
-				CEBD10862BCB2B440041BD82 /* FlightData.swift */,
-				CEBD10882BCB356D0041BD82 /* FlightTrackingTableViewCell.swift */,
-			);
-			path = FlightTracking;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,7 +192,7 @@
 			);
 			name = FinalDestination;
 			packageProductDependencies = (
-				BCA5C9112BBA358F008C1960 /* OAuthSwift */,
+				BC4FDD102BCC68F6005B4D38 /* OAuthSwift */,
 			);
 			productName = FinalDestination;
 			productReference = BCA5C8F72BB9FD17008C1960 /* FinalDestination.app */;
@@ -261,11 +241,11 @@
 			files = (
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
-				CEBD10852BCAF1410041BD82 /* planeIcon.png in Resources */,
+				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
-				CEBD10832BCAEECF0041BD82 /* FT_BG.jpg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
+				BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,17 +262,13 @@
 				910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */,
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
-				CEBD10892BCB356D0041BD82 /* FlightTrackingTableViewCell.swift in Sources */,
 				BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */,
-				CEBD10812BCAE6BA0041BD82 /* FlightTrackingTableViewController.swift in Sources */,
 				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
 				BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */,
-				CEBD10872BCB2B440041BD82 /* FlightData.swift in Sources */,
 				BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */,
 				910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */,
 				BCFB93362BCAD10600DE75BF /* BudgetSwiftUIView.swift in Sources */,
-				CEBD107F2BCAE6460041BD82 /* FlightTrackingViewController.swift in Sources */,
 				BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */,
 				BCFB93342BCAD10300DE75BF /* BudgetData.swift in Sources */,
 				BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */,
@@ -450,16 +426,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalDestination/Info.plist;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "This is used to add calendar events for flights";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
-				INFOPLIST_KEY_NSRemindersUsageDescription = "This is used to add calendar/reminder events for flights";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,16 +453,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalDestination/Info.plist;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "This is used to add calendar events for flights";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This is used to calculate your location to provide you with Sightseeing activities without entering a location";
-				INFOPLIST_KEY_NSRemindersUsageDescription = "This is used to add calendar/reminder events for flights";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +506,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BCA5C9112BBA358F008C1960 /* OAuthSwift */ = {
+		BC4FDD102BCC68F6005B4D38 /* OAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BCA5C9102BBA358F008C1960 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
 			productName = OAuthSwift;
