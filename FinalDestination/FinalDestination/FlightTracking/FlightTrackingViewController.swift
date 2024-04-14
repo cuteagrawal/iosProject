@@ -16,11 +16,11 @@ import UIKit
 import Foundation
 import EventKit
 
-class FlightTrackingViewController: UIViewController {
-
+class FlightTrackingViewController: UIViewController, UITextFieldDelegate{
+    
     // appDelegate instance to add values to DB
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    
     // label for IATA codes (YYZ, YUL, LAX, etc..)
     @IBOutlet var departureAirportCodeLbl: UILabel!
     @IBOutlet var arrivalAirportCodeLbl: UILabel!
@@ -44,7 +44,7 @@ class FlightTrackingViewController: UIViewController {
     // Dictionary to store the api response
     var apiResponse:[String:String] = [:]
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -69,11 +69,11 @@ class FlightTrackingViewController: UIViewController {
         
         //updating airline and flight number
         airlineAndFlightLbl.text =
-            "\(String(describing: apiResponse["airline_name"] ?? "")) \(String(describing: apiResponse["flnr"] ?? ""))"
+        "\(String(describing: apiResponse["airline_name"] ?? "")) \(String(describing: apiResponse["flnr"] ?? ""))"
         
         //updating flight plan (cities)
         flightPlanCitiesLbl.text =
-            "\(String(describing: apiResponse["departure_city"] ?? "")) to \(String(describing: apiResponse["arrival_city"] ?? ""))"
+        "\(String(describing: apiResponse["departure_city"] ?? "")) to \(String(describing: apiResponse["arrival_city"] ?? ""))"
         
     }
     
@@ -123,6 +123,50 @@ class FlightTrackingViewController: UIViewController {
     
     // Add to calendar action
     @IBAction func addToCalendar(sender: UIButton){
+        createCalendarEvent(startTimestampString: apiResponse["scheduled_departure_utc"] ?? ""
+                            ,endTimestampString: apiResponse["scheduled_arrival_utc"] ?? "")
+    }
+    
+    // creating a calendar event
+    func createCalendarEvent(startTimestampString: String, endTimestampString: String){
+        // Create an Event Store instance
+        let eventStore = EKEventStore()
+        
+        // Request access to the user's calendar
+        eventStore.requestAccess(to: .event) { (granted, error) in
+            
+            if granted && error == nil {
+                
+                // Access granted, create the event
+                let event = EKEvent(eventStore: eventStore)
+                event.title = "Your Event Title"
+                
+                // Convert timestamp strings to Date objects
+                let dateFormatter = ISO8601DateFormatter()
+                dateFormatter.timeZone = TimeZone(identifier: "UTC")
+                
+                guard let startDate = dateFormatter.date(from: startTimestampString),
+                      let endDate = dateFormatter.date(from: endTimestampString) else {
+                    print("Error: Unable to parse timestamps.")
+                    return
+                }
+                
+                event.startDate = startDate
+                event.endDate = endDate
+                
+                // Save the event to the calendar
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                do {
+                    try eventStore.save(event, span: .thisEvent)
+                    print("Event saved successfully.")
+                } catch let error {
+                    print("Error saving event: \(error.localizedDescription)")
+                }
+            } else {
+                // Access denied or error occurred
+                print("Error: Access to calendar not granted.")
+            }
+        }
         
     }
     
@@ -159,16 +203,16 @@ class FlightTrackingViewController: UIViewController {
                                     
                                     // storing the response into the dictionary
                                     self.apiResponse = ["airline_name": "\(flightInfo["airline_name"] ?? "N/A")",
-                                                           "flnr": "\(flightInfo["flnr"] ?? "N/A")",
-                                                           "departure_iata": "\(flightInfo["departure_iata"] ?? "N/A")",
-                                                           "arrival_iata": "\(flightInfo["arrival_iata"] ?? "N/A")",
-                                                           "status": "\(flightInfo["status"] ?? "N/A")",
-                                                           "departure_city": "\(flightInfo["departure_city"] ?? "N/A")",
-                                                           "arrival_city": "\(flightInfo["arrival_city"] ?? "N/A")",
-                                                           "scheduled_arrival_local": "\(flightInfo["scheduled_arrival_local"] ?? "N/A")",
-                                                           "scheduled_arrival_utc": "\(flightInfo["scheduled_arrival_utc"] ?? "N/A")",
-                                                           "scheduled_departure_utc": "\(flightInfo["scheduled_departure_utc"] ?? "N/A")",
-                                                           "scheduled_departure_local": "\(flightInfo["scheduled_departure_local"] ?? "N/A")"]
+                                                        "flnr": "\(flightInfo["flnr"] ?? "N/A")",
+                                                        "departure_iata": "\(flightInfo["departure_iata"] ?? "N/A")",
+                                                        "arrival_iata": "\(flightInfo["arrival_iata"] ?? "N/A")",
+                                                        "status": "\(flightInfo["status"] ?? "N/A")",
+                                                        "departure_city": "\(flightInfo["departure_city"] ?? "N/A")",
+                                                        "arrival_city": "\(flightInfo["arrival_city"] ?? "N/A")",
+                                                        "scheduled_arrival_local": "\(flightInfo["scheduled_arrival_local"] ?? "N/A")",
+                                                        "scheduled_arrival_utc": "\(flightInfo["scheduled_arrival_utc"] ?? "N/A")",
+                                                        "scheduled_departure_utc": "\(flightInfo["scheduled_departure_utc"] ?? "N/A")",
+                                                        "scheduled_departure_local": "\(flightInfo["scheduled_departure_local"] ?? "N/A")"]
                                 }
                                 // Update labels on the main thread after processing the API response
                                 DispatchQueue.main.async {
@@ -180,7 +224,7 @@ class FlightTrackingViewController: UIViewController {
                             print("Error parsing JSON: \(parseError)")
                         }
                     }
-
+                    
                 }
             }
         })
