@@ -269,6 +269,11 @@
                         <viewLayoutGuide key="safeArea" id="7Bc-Q9-aKi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="arrivalAirportCodeLbl" destination="lra-4N-WhU" id="UyM-XC-oqq"/>
+                        <outlet property="departureAirportCodeLbl" destination="VUM-FP-FiS" id="f6W-xV-2Fk"/>
+                        <outlet property="flightSearchTxtFld" destination="4v1-vG-MTx" id="lyd-s4-o7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5V-1E-qab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="cnN-FW-ByQ" userLabel="Exit" sceneMemberID="exit"/>
