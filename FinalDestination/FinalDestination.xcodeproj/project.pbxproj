@@ -33,6 +33,12 @@
 		BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */; };
 		BCFB933A2BCAD10B00DE75BF /* OldBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */; };
 		BCFB933C2BCAD10D00DE75BF /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */; };
+		CE1E13822BCC882600B01C92 /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E137E2BCC882600B01C92 /* FlightData.swift */; };
+		CE1E13832BCC882600B01C92 /* FlightTrackingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E137F2BCC882600B01C92 /* FlightTrackingTableViewController.swift */; };
+		CE1E13842BCC882600B01C92 /* FlightTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E13802BCC882600B01C92 /* FlightTrackingViewController.swift */; };
+		CE1E13852BCC882600B01C92 /* FlightTrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E13812BCC882600B01C92 /* FlightTrackingTableViewCell.swift */; };
+		CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13862BCC890B00B01C92 /* planeIcon.png */; };
+		CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13872BCC890B00B01C92 /* FT_BG.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,12 @@
 		BCFB93372BCAD10900DE75BF /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldBudgetViewController.swift; sourceTree = "<group>"; };
 		BCFB933B2BCAD10D00DE75BF /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
+		CE1E137E2BCC882600B01C92 /* FlightData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightData.swift; path = FinalDestination/FlightTracking/FlightData.swift; sourceTree = SOURCE_ROOT; };
+		CE1E137F2BCC882600B01C92 /* FlightTrackingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightTrackingTableViewController.swift; path = FinalDestination/FlightTracking/FlightTrackingTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		CE1E13802BCC882600B01C92 /* FlightTrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightTrackingViewController.swift; path = FinalDestination/FlightTracking/FlightTrackingViewController.swift; sourceTree = SOURCE_ROOT; };
+		CE1E13812BCC882600B01C92 /* FlightTrackingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightTrackingTableViewCell.swift; path = FinalDestination/FlightTracking/FlightTrackingTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		CE1E13862BCC890B00B01C92 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
+		CE1E13872BCC890B00B01C92 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E13872BCC890B00B01C92 /* FT_BG.jpg */,
+				CE1E13862BCC890B00B01C92 /* planeIcon.png */,
 				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
 			);
 			path = Images;
@@ -146,6 +160,7 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E137D2BCC87F000B01C92 /* New Group */,
 				BCFB93302BCAD0E400DE75BF /* Budget */,
 				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
@@ -173,6 +188,17 @@
 				BCFB93392BCAD10B00DE75BF /* OldBudgetViewController.swift */,
 			);
 			path = Budget;
+			sourceTree = "<group>";
+		};
+		CE1E137D2BCC87F000B01C92 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E137E2BCC882600B01C92 /* FlightData.swift */,
+				CE1E13812BCC882600B01C92 /* FlightTrackingTableViewCell.swift */,
+				CE1E137F2BCC882600B01C92 /* FlightTrackingTableViewController.swift */,
+				CE1E13802BCC882600B01C92 /* FlightTrackingViewController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
+				CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */,
+				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
@@ -261,14 +289,18 @@
 				BCFB933C2BCAD10D00DE75BF /* BudgetTableViewCell.swift in Sources */,
 				910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */,
 				BCA5C8FF2BB9FD17008C1960 /* ViewController.swift in Sources */,
+				CE1E13842BCC882600B01C92 /* FlightTrackingViewController.swift in Sources */,
+				CE1E13852BCC882600B01C92 /* FlightTrackingTableViewCell.swift in Sources */,
 				BCA5C8FB2BB9FD17008C1960 /* AppDelegate.swift in Sources */,
 				BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */,
+				CE1E13832BCC882600B01C92 /* FlightTrackingTableViewController.swift in Sources */,
 				BCA5C9142BBA6802008C1960 /* TwitterViewController.swift in Sources */,
 				BCA5C8FD2BB9FD17008C1960 /* SceneDelegate.swift in Sources */,
 				BCFB93382BCAD10900DE75BF /* BudgetViewController.swift in Sources */,
 				BCFB93322BCAD0FE00DE75BF /* AddBudgetViewController.swift in Sources */,
 				910341E82BC5AEEF006CAAC4 /* SightseeingViewController.swift in Sources */,
 				BCFB93362BCAD10600DE75BF /* BudgetSwiftUIView.swift in Sources */,
+				CE1E13822BCC882600B01C92 /* FlightData.swift in Sources */,
 				BC6EF6822BBB752500466C5A /* OldTweetsViewController.swift in Sources */,
 				BCFB93342BCAD10300DE75BF /* BudgetData.swift in Sources */,
 				BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */,
@@ -431,6 +463,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +491,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
