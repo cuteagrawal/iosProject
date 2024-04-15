@@ -308,6 +308,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="locationName" destination="Ozk-za-kQV" id="6eA-7O-c45"/>
                                             <outlet property="locationPhoneNumber" destination="Vrt-Tf-DmR" id="9to-3V-j4g"/>
@@ -324,6 +325,9 @@
                         <viewLayoutGuide key="safeArea" id="ycc-LF-VxA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tbPointsOfInterest" destination="9bX-cQ-uAl" id="tGb-By-bFa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-2T-nCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TBp-IH-5LM" userLabel="Exit" sceneMemberID="exit"/>

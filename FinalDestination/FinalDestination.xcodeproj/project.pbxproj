@@ -12,6 +12,7 @@
 		910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */; };
 		910341EC2BC5CC40006CAAC4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */; };
 		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
+		9127606A2BCCB7E900303B8C /* sunset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 912760692BCCB7E900303B8C /* sunset.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
 		BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */ = {isa = PBXBuildFile; fileRef = BC6EF67F2BBB735E00466C5A /* FinalDestination.db */; };
@@ -33,6 +34,7 @@
 		910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingTableViewController.swift; sourceTree = "<group>"; };
 		910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
+		912760692BCCB7E900303B8C /* sunset.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				912760692BCCB7E900303B8C /* sunset.jpeg */,
 				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
 			);
 			path = Images;
@@ -212,6 +215,7 @@
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
+				9127606A2BCCB7E900303B8C /* sunset.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
