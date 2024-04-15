@@ -23,6 +23,11 @@ class OldBudgetViewController: UIViewController, UITableViewDataSource, UITableV
         // Calling read database methond in AppDelegate and assigning null to viewBudget
         mainDelegate.readDataFromDatabase()
         mainDelegate.viewBudget = nil
+        
+        // Setting background Image for table
+        let backgroundImage = UIImageView(image: UIImage(named: "TweetBackground.jpg"))
+            backgroundImage.contentMode = .scaleAspectFill
+            self.budgetTable.backgroundView = backgroundImage
     }
     
     // Method which will return the row numbers for table
