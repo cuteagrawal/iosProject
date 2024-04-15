@@ -46,6 +46,7 @@
 		CECE805C2BCCBE5C00540B5A /* TweetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE80582BCCBE5C00540B5A /* TweetButton.png */; };
 		CECE805D2BCCBE5C00540B5A /* BudgetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE80592BCCBE5C00540B5A /* BudgetButton.png */; };
 		CECE805E2BCCBE5C00540B5A /* SightSeeingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE805A2BCCBE5C00540B5A /* SightSeeingButton.png */; };
+		CECE80602BCCBFDE00540B5A /* Final Destination.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE805F2BCCBFDE00540B5A /* Final Destination.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		CECE80582BCCBE5C00540B5A /* TweetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TweetButton.png; sourceTree = "<group>"; };
 		CECE80592BCCBE5C00540B5A /* BudgetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BudgetButton.png; sourceTree = "<group>"; };
 		CECE805A2BCCBE5C00540B5A /* SightSeeingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SightSeeingButton.png; sourceTree = "<group>"; };
+		CECE805F2BCCBFDE00540B5A /* Final Destination.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Final Destination.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CECE805F2BCCBFDE00540B5A /* Final Destination.png */,
 				CECE80562BCCBE3100540B5A /* Buttons */,
 				BC54BA832BCCBD0700BFC640 /* MainBack.jpg */,
 				91AF5B622BCCBB1D00E19900 /* sunset.jpeg */,
@@ -301,6 +304,7 @@
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
+				CECE80602BCCBFDE00540B5A /* Final Destination.png in Resources */,
 				91AF5B632BCCBB1D00E19900 /* sunset.jpeg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
