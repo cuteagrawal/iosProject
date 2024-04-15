@@ -14,6 +14,7 @@
 		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
+		BC17C3DC2BCCABB500880EFF /* meme.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC17C3DB2BCCABB500880EFF /* meme.jpeg */; };
 		BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */; };
 		BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */; };
 		BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC4FDD102BCC68F6005B4D38 /* OAuthSwift */; };
@@ -49,6 +50,7 @@
 		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
+		BC17C3DB2BCCABB500880EFF /* meme.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meme.jpeg; sourceTree = "<group>"; };
 		BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TweetBackground.jpg; sourceTree = "<group>"; };
 		BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewTweetBack.jpg; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
@@ -160,7 +162,8 @@
 		BCA5C8F92BB9FD17008C1960 /* FinalDestination */ = {
 			isa = PBXGroup;
 			children = (
-				CE1E137D2BCC87F000B01C92 /* New Group */,
+				BC17C3DB2BCCABB500880EFF /* meme.jpeg */,
+				CE1E137D2BCC87F000B01C92 /* FlightTracking */,
 				BCFB93302BCAD0E400DE75BF /* Budget */,
 				91211C432BC71C1F0099D22D /* Images */,
 				910341E62BC5AED4006CAAC4 /* Sightseeing */,
@@ -190,7 +193,7 @@
 			path = Budget;
 			sourceTree = "<group>";
 		};
-		CE1E137D2BCC87F000B01C92 /* New Group */ = {
+		CE1E137D2BCC87F000B01C92 /* FlightTracking */ = {
 			isa = PBXGroup;
 			children = (
 				CE1E137E2BCC882600B01C92 /* FlightData.swift */,
@@ -198,7 +201,7 @@
 				CE1E137F2BCC882600B01C92 /* FlightTrackingTableViewController.swift */,
 				CE1E13802BCC882600B01C92 /* FlightTrackingViewController.swift */,
 			);
-			path = "New Group";
+			path = FlightTracking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +271,7 @@
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
 				CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */,
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
+				BC17C3DC2BCCABB500880EFF /* meme.jpeg in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
