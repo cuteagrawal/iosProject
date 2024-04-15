@@ -135,6 +135,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dhm-nR-npm" id="8h9-e6-gaE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOJ-fr-5FK">
                                 <rect key="frame" x="108" y="743" width="177" height="41"/>
@@ -888,7 +891,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PQO-uH-jtZ"/>
+        <segue reference="Lkf-OI-Hwr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="FT_BG.jpg" width="1281" height="1920"/>
