@@ -42,6 +42,10 @@
 		CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13862BCC890B00B01C92 /* planeIcon.png */; };
 		CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13872BCC890B00B01C92 /* FT_BG.jpg */; };
 		CE1E13C02BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */; };
+		CE1E13D02BCCBB4700B01C92 /* TweetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13CC2BCCBB4700B01C92 /* TweetButton.png */; };
+		CE1E13D12BCCBB4700B01C92 /* BudgetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13CD2BCCBB4700B01C92 /* BudgetButton.png */; };
+		CE1E13D22BCCBB4700B01C92 /* SightSeeingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13CE2BCCBB4700B01C92 /* SightSeeingButton.png */; };
+		CE1E13D32BCCBB4700B01C92 /* FlightStatusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13CF2BCCBB4700B01C92 /* FlightStatusButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +85,10 @@
 		CE1E13862BCC890B00B01C92 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
 		CE1E13872BCC890B00B01C92 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
 		CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Island_iPhone_14Pro-1.png"; sourceTree = "<group>"; };
+		CE1E13CC2BCCBB4700B01C92 /* TweetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TweetButton.png; sourceTree = "<group>"; };
+		CE1E13CD2BCCBB4700B01C92 /* BudgetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BudgetButton.png; sourceTree = "<group>"; };
+		CE1E13CE2BCCBB4700B01C92 /* SightSeeingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SightSeeingButton.png; sourceTree = "<group>"; };
+		CE1E13CF2BCCBB4700B01C92 /* FlightStatusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightStatusButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,11 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				91AF5B622BCCBB1D00E19900 /* sunset.jpeg */,
+=======
+				CE1E13C12BCCB92B00B01C92 /* ButtonImages */,
+>>>>>>> Stashed changes
 				CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */,
 				BC17C3DF2BCCB46200880EFF /* MainBack.jpg */,
 				CE1E13872BCC890B00B01C92 /* FT_BG.jpg */,
@@ -210,6 +222,17 @@
 			path = FlightInfo;
 			sourceTree = "<group>";
 		};
+		CE1E13C12BCCB92B00B01C92 /* ButtonImages */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E13CD2BCCBB4700B01C92 /* BudgetButton.png */,
+				CE1E13CF2BCCBB4700B01C92 /* FlightStatusButton.png */,
+				CE1E13CE2BCCBB4700B01C92 /* SightSeeingButton.png */,
+				CE1E13CC2BCCBB4700B01C92 /* TweetButton.png */,
+			);
+			path = ButtonImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,9 +302,16 @@
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
+<<<<<<< Updated upstream
 				91AF5B632BCCBB1D00E19900 /* sunset.jpeg in Resources */,
+=======
+				CE1E13D12BCCBB4700B01C92 /* BudgetButton.png in Resources */,
+				CE1E13D32BCCBB4700B01C92 /* FlightStatusButton.png in Resources */,
+>>>>>>> Stashed changes
 				BC17C3E02BCCB46200880EFF /* MainBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
+				CE1E13D22BCCBB4700B01C92 /* SightSeeingButton.png in Resources */,
+				CE1E13D02BCCBB4700B01C92 /* TweetButton.png in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
 				CE1E13C02BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png in Resources */,
