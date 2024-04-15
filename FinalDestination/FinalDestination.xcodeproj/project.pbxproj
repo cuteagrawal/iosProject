@@ -42,6 +42,10 @@
 		CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13862BCC890B00B01C92 /* planeIcon.png */; };
 		CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13872BCC890B00B01C92 /* FT_BG.jpg */; };
 		CE1E13C02BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */; };
+		CECE805B2BCCBE5C00540B5A /* FlightStatusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE80572BCCBE5C00540B5A /* FlightStatusButton.png */; };
+		CECE805C2BCCBE5C00540B5A /* TweetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE80582BCCBE5C00540B5A /* TweetButton.png */; };
+		CECE805D2BCCBE5C00540B5A /* BudgetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE80592BCCBE5C00540B5A /* BudgetButton.png */; };
+		CECE805E2BCCBE5C00540B5A /* SightSeeingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE805A2BCCBE5C00540B5A /* SightSeeingButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +85,10 @@
 		CE1E13862BCC890B00B01C92 /* planeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeIcon.png; sourceTree = "<group>"; };
 		CE1E13872BCC890B00B01C92 /* FT_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FT_BG.jpg; sourceTree = "<group>"; };
 		CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Island_iPhone_14Pro-1.png"; sourceTree = "<group>"; };
+		CECE80572BCCBE5C00540B5A /* FlightStatusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightStatusButton.png; sourceTree = "<group>"; };
+		CECE80582BCCBE5C00540B5A /* TweetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TweetButton.png; sourceTree = "<group>"; };
+		CECE80592BCCBE5C00540B5A /* BudgetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BudgetButton.png; sourceTree = "<group>"; };
+		CECE805A2BCCBE5C00540B5A /* SightSeeingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SightSeeingButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CECE80562BCCBE3100540B5A /* Buttons */,
 				BC54BA832BCCBD0700BFC640 /* MainBack.jpg */,
 				91AF5B622BCCBB1D00E19900 /* sunset.jpeg */,
 				CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */,
@@ -210,6 +219,17 @@
 			path = FlightInfo;
 			sourceTree = "<group>";
 		};
+		CECE80562BCCBE3100540B5A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CECE80592BCCBE5C00540B5A /* BudgetButton.png */,
+				CECE80572BCCBE5C00540B5A /* FlightStatusButton.png */,
+				CECE805A2BCCBE5C00540B5A /* SightSeeingButton.png */,
+				CECE80582BCCBE5C00540B5A /* TweetButton.png */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA5C9072BB9FD18008C1960 /* LaunchScreen.storyboard in Resources */,
+				CECE805B2BCCBE5C00540B5A /* FlightStatusButton.png in Resources */,
 				CE1E13892BCC890B00B01C92 /* FT_BG.jpg in Resources */,
+				CECE805C2BCCBE5C00540B5A /* TweetButton.png in Resources */,
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
@@ -285,6 +307,8 @@
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
 				BC54BA842BCCBD0700BFC640 /* MainBack.jpg in Resources */,
 				CE1E13C02BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png in Resources */,
+				CECE805D2BCCBE5C00540B5A /* BudgetButton.png in Resources */,
+				CECE805E2BCCBE5C00540B5A /* SightSeeingButton.png in Resources */,
 				BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
