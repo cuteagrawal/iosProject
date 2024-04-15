@@ -9,8 +9,13 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    //The name of the Point of Interest
     @IBOutlet var locationName : UILabel!
+    
+    //The type of the Point of Interest
     @IBOutlet var locationType : UILabel!
+    
+    //The phone number of the Point of Interest
     @IBOutlet var locationPhoneNumber : UILabel!
     
     override func awakeFromNib() {

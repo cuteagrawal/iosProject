@@ -10,6 +10,7 @@ import MapKit
 
 class SightseeingTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //Accesses the main delegate of the application so the Points of Interest table can be used
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -17,14 +18,19 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
         // Do any additional setup after loading the view.
     }
     
+    
+    //Sets the total number of rows in the Table View using the Points of Interest table count
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mainDelegate.pointsOfInterest.count
     }
     
+    //Sets the height for each cell in the Table View to 100
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
+    
+    //Loops through the data in the Points of Interest table and creates table cells for each entry and displays their name, category and phone number
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell : POITableViewCell = tableView.dequeueReusableCell(withIdentifier: "POICell") as? POITableViewCell ?? POITableViewCell(style: .default, reuseIdentifier: "POICell")
         
@@ -43,6 +49,8 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
         return tableCell
     }
     
+    
+    //This function opens the users maps application with the address of the Point of Interest when a cell is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mainDelegate.pointsOfInterest[indexPath.row].openInMaps()
     }

@@ -8,10 +8,13 @@
 import UIKit
 import MapKit
 
-class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
 
+    
+    //Access the main delegate so the Point of Interests table can be used
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    //Text Field for the location of the user
     @IBOutlet var tbLocation : UITextField!
     
     override func viewDidLoad() {
@@ -20,8 +23,15 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         // Do any additional setup after loading the view.
     }
     
+    //Allow the keyboard to disappear after pressing return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
+    //An unwind segue to unwind the view controllers
     @IBAction func unwindToSightseeingVC (sender: UIStoryboardSegue) { }
     
+    //Use the location the user provided in the Text Field tbLocation to find Points of Interest in the area
     @IBAction func findPointsOfInterest()
     {
         print("Fetching")
@@ -33,6 +43,19 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
         geocoder.geocodeAddressString(tbLocation.text!, completionHandler: {
             placemarks, error in
             
+            if (placemarks?.first == nil)
+            {
+                let alert = UIAlertController(title: "Location Not Found", message: "This location doesn't seem to exist, please check the spelling and try again.", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Okay", style: .cancel)
+                
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true)
+                
+                return
+            }
+            
             let location = (placemarks?.first)!
             
             let poiRequest = MKLocalPointsOfInterestRequest(center: location.location!.coordinate, radius: 1000)
@@ -40,12 +63,17 @@ class SightseeingViewController: UIViewController, MKMapViewDelegate, CLLocation
             let search = MKLocalSearch(request: poiRequest)
             search.start(completionHandler: {
                 placemarks, error in
-                self.mainDelegate.pointsOfInterest = placemarks!.mapItems
+                
+                var placemarkList = placemarks?.mapItems
+                placemarkList?.remove(at: 0)
+                
+                self.mainDelegate.pointsOfInterest = placemarkList!
                 self.performSegue(withIdentifier: "segueToPOIList", sender: nil)
             })
         })
     }
     
+    //Find Points of Interest based on the users cell phone location
     @IBAction func findPointsOfInterestByUserLocation()
     {
         print("Fetching")
