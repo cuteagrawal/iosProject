@@ -14,6 +14,7 @@
 		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
+		BC17C3E02BCCB46200880EFF /* MainBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC17C3DF2BCCB46200880EFF /* MainBack.jpg */; };
 		BC3D6EFE2BCC48CA0088F5B3 /* TweetBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */; };
 		BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */; };
 		BC4FDD112BCC68F6005B4D38 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC4FDD102BCC68F6005B4D38 /* OAuthSwift */; };
@@ -50,6 +51,7 @@
 		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
+		BC17C3DF2BCCB46200880EFF /* MainBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MainBack.jpg; sourceTree = "<group>"; };
 		BC3D6EFD2BCC48CA0088F5B3 /* TweetBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TweetBackground.jpg; sourceTree = "<group>"; };
 		BC3D6EFF2BCC49670088F5B3 /* NewTweetBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewTweetBack.jpg; sourceTree = "<group>"; };
 		BC6EF67F2BBB735E00466C5A /* FinalDestination.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalDestination.db; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */,
+				BC17C3DF2BCCB46200880EFF /* MainBack.jpg */,
 				CE1E13872BCC890B00B01C92 /* FT_BG.jpg */,
 				CE1E13862BCC890B00B01C92 /* planeIcon.png */,
 				91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */,
@@ -273,6 +276,7 @@
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
+				BC17C3E02BCCB46200880EFF /* MainBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
 				BC6EF6802BBB735E00466C5A /* FinalDestination.db in Resources */,
