@@ -5,21 +5,32 @@
 //  Created by Cute Agrawal on 2024-03-31.
 //  Modified by Jay Patel on 2024-04-09.
 //  Modified by Feby Jomy on 20234-04-13.
+//  Modified by Jacob on 20234-04-13.
 //
 
 import UIKit
 import SQLite3
 import MapKit
+/**
+ * This is App delegate
+ * This is where the database connection is made and shared bewteen different view controllers
+ */
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    // Database name saved in a vaible
     var databaseName : String = "FinalDestination.db"
+    // Path Array
     var databasePath : String = ""
+    // Twitter Array
     var tweetArr : [TweetData] = []
+    // Point of Inetest array to save locations
     var pointsOfInterest : [MKMapItem] = []
+    // Budget data array
     var budgetArr : [BudgetData] = []
     var viewBudget : BudgetData? = nil
+    // FLight data array
     var flightArr: [FlightData] = []
     var viewFlight: FlightData? = nil
     
@@ -33,12 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         databasePath = documentsDir.appending("/" + databaseName)
         print("location is: " + databasePath)
         
+        // called to read the data
         checkAndCreateDatabase()
         readDataFromDatabase()
         
         return true
     }
     
+    // Finds the database
     func checkAndCreateDatabase(){
         
         var success = false
@@ -55,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    // Reads the Flight data from the database
     func readFlightDataFromDatabase(){
         flightArr.removeAll()
         var db:OpaquePointer? = nil
@@ -101,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+    // Reads the Tweet and Budget data from the database
     func readDataFromDatabase(){
         
         tweetArr.removeAll()
@@ -113,18 +127,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("successfully opened database at \(self.databasePath)")
             
             var queryStatement : OpaquePointer? = nil
+            // query for tweets
             var queryString : String = "select * from tweets"
+            //query for budget data
             let queryString2: String = "select * from budgets"
             
             if(sqlite3_prepare_v2(db, queryString, -1, &queryStatement, nil)) == SQLITE_OK{
                 
                 while(sqlite3_step(queryStatement) == SQLITE_ROW){
                     
+                    // Tweet id and Tweet String
                     let id : Int = Int(sqlite3_column_int(queryStatement,0))
                     let cTweet = sqlite3_column_text(queryStatement, 1)
                     
                     let tweet = String(cString: cTweet!)
                     
+                    // Data gets appended into the array
                     let data : TweetData = .init()
                     data.initWithData(theRow: id, theTweet: tweet)
                     tweetArr.append(data)
@@ -138,6 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     while(sqlite3_step(queryStatement) == SQLITE_ROW){
                         
+                        // Budget data gets extracted
                         let id : Int = Int(sqlite3_column_int(queryStatement,0))
                         let cDestination = sqlite3_column_text(queryStatement, 1)
                         let transportaton : Double = Double(sqlite3_column_double(queryStatement, 2))
@@ -152,6 +171,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         let data : BudgetData = .init()
                         data.initWithData(theRow: id, theDestination: destination, theTransportation: transportaton, theFood: food, theAccommodation: accommodation, theOther: other, TheCurrency: currecy)
+                        
+                        // Budget data gets appended into an array
                         budgetArr.append(data)
                         
                         print("query result: ")
@@ -165,6 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    // Inserts into Twitter part of the database
     func inserIntoDatabase(tweetInstance : TweetData) -> Bool
     {
         
@@ -174,6 +196,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(sqlite3_open(self.databasePath, &db)) == SQLITE_OK{
             
             var insertStatement : OpaquePointer? = nil
+            // Two parameters id and Strig (tweet)
             var insertString : String = "insert into tweets values(NULL, ?)"
             
             
@@ -201,6 +224,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 returnCode = false
             }
             
+            // Closes the database
             sqlite3_close(db)
             
         }else{
@@ -220,6 +244,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(sqlite3_open(self.databasePath, &db)) == SQLITE_OK{
             
             var insertStatement : OpaquePointer? = nil
+            // SQL query to add data
             let insertString : String = "insert into budgets values(NULL, ?, ?, ?, ?, ?, ?)"
             
             
