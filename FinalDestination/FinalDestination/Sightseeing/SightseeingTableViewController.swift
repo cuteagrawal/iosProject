@@ -13,9 +13,17 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
     //Accesses the main delegate of the application so the Points of Interest table can be used
     var mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    //Outlet the Table View so we can modify properties
+    @IBOutlet var tbPointsOfInterest : UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        var background = UIImageView(image: UIImage(named: "sunset.jpeg"))
+        background.contentMode = .scaleAspectFill
+        
+        tbPointsOfInterest.backgroundView = background
     }
     
     
@@ -45,6 +53,8 @@ class SightseeingTableViewController: UIViewController, UITableViewDelegate, UIT
         tableCell.locationPhoneNumber.text = mainDelegate.pointsOfInterest[rowNum].phoneNumber ?? "No Phone Number Provided"
         
         tableCell.accessoryType = .disclosureIndicator
+        
+        tableCell.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.75)
         
         return tableCell
     }

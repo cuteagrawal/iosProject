@@ -12,6 +12,7 @@
 		910341EA2BC5B06B006CAAC4 /* SightseeingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */; };
 		910341EC2BC5CC40006CAAC4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */; };
 		91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */; };
+		91AF5B632BCCBB1D00E19900 /* sunset.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91AF5B622BCCBB1D00E19900 /* sunset.jpeg */; };
 		BC09063A2BBB82A200BF19AB /* TweetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0906392BBB82A200BF19AB /* TweetData.swift */; };
 		BC09063C2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */; };
 		BC17C3E02BCCB46200880EFF /* MainBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC17C3DF2BCCB46200880EFF /* MainBack.jpg */; };
@@ -49,6 +50,7 @@
 		910341E92BC5B06B006CAAC4 /* SightseeingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightseeingTableViewController.swift; sourceTree = "<group>"; };
 		910341EB2BC5CC40006CAAC4 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 		91211C442BC71C2A0099D22D /* sightseeingBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sightseeingBackground.jpeg; sourceTree = "<group>"; };
+		91AF5B622BCCBB1D00E19900 /* sunset.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpeg; sourceTree = "<group>"; };
 		BC0906392BBB82A200BF19AB /* TweetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetData.swift; sourceTree = "<group>"; };
 		BC09063B2BBB8B1B00BF19AB /* SiteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCellTableViewCell.swift; sourceTree = "<group>"; };
 		BC17C3DF2BCCB46200880EFF /* MainBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MainBack.jpg; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		91211C432BC71C1F0099D22D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				91AF5B622BCCBB1D00E19900 /* sunset.jpeg */,
 				CE1E13BF2BCCB2F800B01C92 /* Island_iPhone_14Pro-1.png */,
 				BC17C3DF2BCCB46200880EFF /* MainBack.jpg */,
 				CE1E13872BCC890B00B01C92 /* FT_BG.jpg */,
@@ -276,6 +279,7 @@
 				CE1E13882BCC890B00B01C92 /* planeIcon.png in Resources */,
 				BCA5C9042BB9FD18008C1960 /* Assets.xcassets in Resources */,
 				BC3D6F002BCC49670088F5B3 /* NewTweetBack.jpg in Resources */,
+				91AF5B632BCCBB1D00E19900 /* sunset.jpeg in Resources */,
 				BC17C3E02BCCB46200880EFF /* MainBack.jpg in Resources */,
 				BCA5C9022BB9FD17008C1960 /* Main.storyboard in Resources */,
 				91211C452BC71C2A0099D22D /* sightseeingBackground.jpeg in Resources */,
