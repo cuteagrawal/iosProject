@@ -15,12 +15,13 @@ let mainDelegate = UIApplication.shared.delegate as! AppDelegate
 let destination = mainDelegate.viewBudget?.destination
 
 // Method to go from SwiftUI to ViewController
-struct YourViewControllerViewWithStoryboard: UIViewControllerRepresentable {
+struct ViewControllerStoryboard: UIViewControllerRepresentable {
     // UIViewController instance from the storyboard
     func makeUIViewController(context: Context) -> ViewController {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController") as? ViewController else {
             fatalError("ViewController not implemented in storyboard")
         }
+        viewController.modalPresentationStyle = .fullScreen
         return viewController
     }
 
@@ -67,7 +68,7 @@ struct BudgetSwiftUIView: View {
             .navigationBarTitle(Text("Budget Overview"), displayMode: .inline)
             .background(
                 // NavigationLink to navigate to another view
-                NavigationLink(destination: YourViewControllerViewWithStoryboard()
+                NavigationLink(destination: ViewControllerStoryboard()
                                    .navigationBarBackButtonHidden(true), // Hide back button for this destination
                                isActive: $navigateToViewController) {
                     EmptyView()
